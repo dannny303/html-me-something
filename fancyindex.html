@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WishinIwasFishin</title>
+<link href="fancycss.css" rel="stylesheet" type="text/css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+<link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css' rel='stylesheet' />
+
+<link rel="icon" href="/img/WF2icon.png">
+</head>
+
+<body>
+<header class="sticky-shrinknav-header">
+  <h1 class="sticky-shrinknav-header-title">Wishin I was Fishin</h1>
+  <ul class="menu align-center sticky-shrinknav-menu">
+    <li><a href="/index">Home</a></li>
+    <li><a href="/why">Why</a></li>
+    <li><a href="/water">Water</a></li>
+    <li><a href="/gear">Gear</a></li>
+  </ul>
+</header>
+
+<br>
+
+
+</body>
+<br>
+<div class="article-row-section">
+  <div class="article-row-section-inner">
+
+    <h2 class="article-row-section-header"><b>Dan's Fishing Guide</b></h2>
+<br>
+	<h2 class="article-row-section-header">Trip Reports</h2>
+
+    <a href="/waterLowerB">
+      <article class="article-row">
+        <div class="article-row-img">
+          <img src="/img/09057500big.jpg" alt="USGS water below dam">
+        </div>
+        <div class="article-row-content">
+          <h1 class="article-row-content-header">Blue River Below Green Mountain Reservoir</h1>
+
+          <p class="article-row-content-description">Fishing the lower Blue river can be a pure joy or true heartbreak, sometimes in the same day.
+          Jurassic Park is a nickname that whole heartedly fits this river. The fish are flat out huge dinosaurs that will make you skin moisturize itself and will cause your heart to beat right out of your chest cavity! Notable Drake Hatch and peg egg city.</p>
+
+          <p class="article-row-content-author">By Dan</p>
+          <time class="article-row-content-time" datetime="2008-02-14 20:00">July 14th 2021</time>
+        </div>
+      </article>
+    </a>
+
+    <a href="/watersouthpDS">
+      <article class="article-row article-row-reversed">
+        <div class="article-row-img">
+          <img src="/img/charliemeyersSWA.jpg" alt="picture of a whale eating a donkey">
+        </div>
+        <div class="article-row-content">
+          <h1 class="article-row-content-header">South Platte River, Charlie Meyers Dream Stream</h1>
+
+          <p class="article-row-content-description">The Dream Stream is the section of the South Platte River between Spinney Mountain Reservoir and Elevenmile Reservoir. The Dream Stream is famous for its runs of rainbow and cutthroat
+trout in the spring and brown trout and kokanee salmon in the fall out of Elevenmile Reservoir. </p>
+
+          <p class="article-row-content-author">By Dan</p>
+          <time class="article-row-content-time" datetime="2008-02-14 20:00">July 14th 2021</time>
+        </div>
+      </article>
+    </a>
+
+    <a href="/watercolorado">
+      <article class="article-row">
+        <div class="article-row-img">
+          <img src="/img/09058000big.jpg" alt="picture of a whale eating a donkey">
+        </div>
+        <div class="article-row-content">
+          <h1 class="article-row-content-header">Colorado River Pumphouse Recreation Area</h1>
+
+          <p class="article-row-content-description">Salmonflies, salmonflies and salmonflies! Float fishing, booze cruising and wade fishing are the things to do on this section of water. Very popular during summer months!</p>
+
+          <p class="article-row-content-author">Dan</p>
+          <time class="article-row-content-time" datetime="2008-02-14 20:00">July 14th 2021</time>
+        </div>
+      </article>
+    </a>
+
+  </div>
+</div>
+<br>
+<div id='map3'>
+<h2>Float Maps</h2>
+<h3>Colorado</h3>
+</div>
+
+<br>
+
+<div id='map2'>
+<h3>Lower Blue</h3>
+</div>
+
+<br>
+<div id='map'>
+
+<h3>North Platte</h3>
+</div>
+
+
+</div>
+  <a href="/waterLowerB">
+  <div class="row main-links">
+    <div class="small-12 medium-4 columns">
+      <div class="title-box">
+        <h4 class="title-box-title">Lower Blue</h4>
+      </div>
+      <img src="/img/20170923_123927.jpg">
+    </div>
+  </a>
+  <a href="/watersouthpD">
+    <div class="small-12 medium-4 columns">
+      <div class="title-box">
+        <h4 class="title-box-title">South Platte Deckers</h4>
+      </div>
+      <img src="/img/20140124_165854.jpg">
+    </div>
+    </a>
+     <a href="/watersouthpDS">
+    <div class="small-12 medium-4 columns">
+      <div class="title-box">
+        <h4 class="title-box-title">South Platte Dream Stream </h4>
+      </div>
+      <img src="/img/IMG_20140303_105709.jpg">
+    </div>
+    </a>
+  </div>
+  </div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGFubm55IiwiYSI6IlBsdllvaUEifQ.g9fZTsD--aYGFSHjjgYkVw';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/dannny/cjc56v7ve4yl82smz4zsbcp2y', // stylesheet location
+    center: [ -106.462783, 41.076991], // starting position [lng, lat]
+    zoom: 10 // starting zoom
+});
+
+var map2 = new mapboxgl.Map({
+    container: 'map2', // container id
+    style: 'mapbox://styles/dannny/cjc2f5eqo18ya2rl9khjwzpsy', // stylesheet location
+    center: [-106.334953,39.931734], // starting position [lng, lat]
+    zoom: 10 // starting zoom
+});
+
+var map = new mapboxgl.Map({
+    container: 'map3', // container id
+    style: 'mapbox://styles/dannny/cjc57rcmb4zt92rrxaeal5sz3', // stylesheet location
+    center: [-106.634953,39.900034], // starting position [lng, lat]
+    zoom: 10 // starting zoom
+});
+
+
+</script> 
+
+
+
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.2/js/foundation.min.js"></script>
+<script>
+$(function() {
+  $(window).scroll(function() {
+    var winTop = $(window).scrollTop();
+    if (winTop >= 30) {
+      $("body").addClass("sticky-shrinknav-wrapper");
+    } else{
+      $("body").removeClass("sticky-shrinknav-wrapper");
+    }
+  });
+});
+</script>
+</body>
+</html>
