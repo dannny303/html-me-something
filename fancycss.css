@@ -279,3 +279,9 @@ mapbody { margin:5px; padding:5px; }
 mapbody { margin:5px; padding:5px; }
 #map3 { position:center; left: 12%; top:0; bottom:0; width: 70%; height:400px; }
 
+
+
+body {
+	padding-top: 375px!important;
+
+}
